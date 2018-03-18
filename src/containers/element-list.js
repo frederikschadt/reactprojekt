@@ -23,40 +23,39 @@ class ElementList extends Component {
     });
   }
 
-  renderEmptyList() {
-      return (
-           <li>
-           &nbsp;
-           </li>
-      );
+  renderEmptyList(length) {
+    const helpArr = [];  
+    for(let i = 0; i < length; i++) {
+        helpArr[i] = i;
+    }
+    return helpArr.map((element) => {
+       return (
+        <li>
+        &nbsp;
+        </li>
+       );
+    });
   }
 
   render() {
     return (
       <ul className="content__list">
       {this.renderList(0, 1)}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
+      {this.renderEmptyList(16)}
       {this.renderList(1, 2)}
       {this.renderList(2, 4)}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}
+      {this.renderEmptyList(10)}
       {this.renderList(4, 10)}
       {this.renderList(10, 12)}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}{this.renderEmptyList()}
-      {this.renderEmptyList()}{this.renderEmptyList()}
+      {this.renderEmptyList(10)}
       {this.renderList(12, 18)}
       {this.renderList(18, 36)}
       {this.renderList(36, 54)}
       {this.renderList(54, 56)}
-      {this.renderEmptyList()}
+      {this.renderEmptyList(1)}
       {this.renderList(71, 86)}
       {this.renderList(86, 88)}
-      {this.renderEmptyList()}
+      {this.renderEmptyList(1)}
       {this.renderList(103, 118)}
       </ul>
     )

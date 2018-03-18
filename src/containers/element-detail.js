@@ -9,7 +9,7 @@ class ElementDetail extends Component {
     }
 
     return (
-      <div>
+      <div className="detail_list">
       <h3>Beschreibung:</h3>
       <div>Name: {this.props.element.name}</div>
       <div>Ordnungszahl: {this.props.element.ordnungszahl}</div>
