@@ -1,10 +1,12 @@
 
 .container {
   margin-left: 0;
+ display: grid;
+  grid-template-columns: 1fr ;
 }
 
 ul li {
-  width: 100%;
+  width: 75%;
   display: block;
   border-radius: 10px;
 }
@@ -66,18 +68,34 @@ ul li {
 
 li {
   float: left;
-  padding: 10px 10px 10px 10px;
+  padding: 5px;
+  margin: 1px;
+  margin-right: 15px;
   text-align: center;
+  font-size: 12px;
 }
 
 h1 {
   margin-top: 20px !important;
   width: 100%;
   text-align: center;
+  
 }
 
 .content__list {
+    grid-column: 1;
     display: grid;
     grid-template-columns: repeat(18, [start] 1fr [end]) ;
     grid-template-rows: repeat(7, 1fr);
 }
+
+.detail_list {
+   grid-column: 2 / -1;
+   margin-left: 50px;
+}
+/*
+.description {
+  display: flex;
+  justify-content: flex-start;
+}
+*/
