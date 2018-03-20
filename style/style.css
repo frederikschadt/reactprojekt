@@ -1,8 +1,9 @@
 
 .container {
   margin-left: 0;
- display: grid;
-  grid-template-columns: 1fr ;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 ul li {
@@ -93,9 +94,23 @@ h1 {
    grid-column: 2 / -1;
    margin-left: 50px;
 }
-/*
+
 .description {
-  display: flex;
-  justify-content: flex-start;
+   position: absolute;
+   top: 70px;
+   left: 120px;
+   width: 400px;
+   height: 80px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   
 }
-*/
+
+
+
+.description ul li {
+  font-size: 5px;
+  float: left;
+  margin-top: 0;
+  padding: 0;
+}
